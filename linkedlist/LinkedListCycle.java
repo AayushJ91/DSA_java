@@ -49,14 +49,28 @@ public class LinkedListCycle {
     }
 
     static boolean optimistic(ListNode head) {
-        return true;
+        //Time: 0ms best, beats 100;
+        //Space: 44.77 MB, beats 27.85;
+        //by solution
+        if (head == null || head.next == null) {
+            return false;
+        }
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void main(String[] args) {
         ListNode pos = new ListNode();
         ListNode head = pos = new ListNode(1);
         head.next = new ListNode(2);
-        head.next.next = pos;
+//        head.next.next = pos;
 //        head.next.next = pos;
 //        head.next.next = new ListNode(0);
 //        head.next.next.next = new ListNode(-4);
@@ -70,7 +84,7 @@ public class LinkedListCycle {
 //        }
 //        System.out.println("null");
 
-        boolean val = naive2(head);
+        boolean val = optimistic(head);
         System.out.println(val);
     }
 }

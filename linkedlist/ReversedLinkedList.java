@@ -2,7 +2,7 @@
 //link: https://leetcode.com/problems/reverse-linked-list/
 //Source: LeetCode (206)
 //Topics: Linked List
-//Diff: Easy
+//Diff: Easy - by soln
 
 import java.util.ArrayList;
 import java.util.Collection;
