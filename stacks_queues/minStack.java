@@ -11,19 +11,19 @@ import java.util.Objects;
 public class minStack {
     //runtime error
     private int top;
-    private int[] arr;
+    private ArrayList<Integer> list;
     private int min1;
     private int min2;
     public minStack() {
         top = -1;
-        arr = new int[1000];
+        list = new ArrayList<>();
         int min1 = Integer.MAX_VALUE;
         int min2 = Integer.MAX_VALUE;
     }
 
     public void push(int val) {
         top++;
-        arr[top] = val;
+        list.add(val);
         if (val <= min1) {
             min2 = min1;
             min1 = val;
@@ -34,15 +34,16 @@ public class minStack {
     }
 
     public void pop() {
-        if (arr[top] == min1) {
+        if (list.getLast() == min1) {
             min1 = min2;
         }
-        arr[top] = 0;
+        list.removeLast();
         top--;
     }
 
     public int top() {
-        return arr[top];
+//        return arr[top];
+        return 5;
     }
 
     public int getMin() {
