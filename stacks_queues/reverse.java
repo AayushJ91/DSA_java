@@ -2,12 +2,13 @@
 //link: https://www.geeksforgeeks.org/problems/reverse-a-string-using-stack/1
 //Source: GFG
 //Topics: Stack
-//Diff: Med
+//Diff: Easy
 
 import java.util.Stack;
 
 public class reverse {
     static String rev(String s) {
+        //done
         Stack<Character> st = new Stack<>();
         char[] ch = s.toCharArray();
         int l = s.length();

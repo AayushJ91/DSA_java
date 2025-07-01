@@ -14,10 +14,12 @@ public class RemovingNthNode {
             size++;
             last = last.next;
         }
+        //invalid case
         if (n > size) {
             System.out.println("Invalid");
             return new ListNode();
         }
+        //if only 1 node is there
         if (size - n == 0) {
             return head.next;
         }
@@ -25,7 +27,8 @@ public class RemovingNthNode {
         ListNode prev = head;
         for (int i = 1; i <= size - n; i++) {
             prev = curr;
-            if (i == size){
+            if (i == size){//for the last node
+                //curr.next ko null kr diya, phir loop ke bahar prev.next usko curr.next(null) se jod raha hai
                 curr.next = null;
                 break;
             }else {

@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class minStack {
+    //Nhi hua
     //runtime error
     private int top;
     private ArrayList<Integer> list;
