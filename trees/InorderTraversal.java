@@ -3,6 +3,9 @@
 //Source: Leetcode (94)
 //Topics: Tree
 //Diff: Easy
+import com.sun.source.tree.Tree;
+
+import javax.swing.tree.TreeCellRenderer;
 import java.util.ArrayList;
 
 public class InorderTraversal {
@@ -19,6 +22,15 @@ public class InorderTraversal {
         list.addAll(inorderTraversal(root.right));
         return list;
     }
+
+    static void recursive(TreeNode root) {
+        if (root == null) return;
+
+        recursive(root.left);
+        System.out.print(root.data+",");
+        recursive(root.right);
+    }
+
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
