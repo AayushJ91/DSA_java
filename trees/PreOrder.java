@@ -12,7 +12,7 @@ public class PreOrder {
     static void recursive(TreeNode root) {
         if (root == null) return;
 
-        System.out.print(root.data+",");
+        System.out.print(root.val+",");
         recursive(root.left);
         recursive(root.right);
     }
@@ -28,7 +28,7 @@ public class PreOrder {
     private static void maker(TreeNode root, ArrayList<Integer> list){
         if (root == null) return;
 
-        list.add(root.data);
+        list.add(root.val);
         maker(root.left, list);
         maker(root.right, list);
     }
@@ -45,7 +45,7 @@ public class PreOrder {
             //because left will be at the top
             //As it is preOrder, the popped node will be added first
             TreeNode temp = st.pop();
-            result.add(temp.data);
+            result.add(temp.val);
             if (temp.right != null) st.add(temp.right);
             if (temp.left != null) st.add(temp.left);
         }

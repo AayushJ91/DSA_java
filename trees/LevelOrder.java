@@ -29,7 +29,7 @@ public class LevelOrder {
 //                System.out.println("temp.data:"+temp.data);
 //                System.out.println("temp.ri:"+ temp.right.data);
 //                System.out.println("temp.le:"+temp.left.data);
-                levels.add(temp.data);
+                levels.add(temp.val);
                 System.out.println("levels_aft:"+levels);
                 if (temp.left != null) q.add(temp.left);
                 if (temp.right != null) q.add(temp.right);

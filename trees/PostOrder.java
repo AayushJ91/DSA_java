@@ -7,7 +7,7 @@ public class PostOrder {
 
         recursive(root.left);
         recursive(root.right);
-        System.out.print(root.data+",");
+        System.out.print(root.val+",");
     }
 
     static ArrayList<Integer> recursive2(TreeNode root) {
@@ -22,7 +22,7 @@ public class PostOrder {
         ArrayList<Integer> result = new ArrayList<>();
         maker(result, root.left);
         maker(result, root.right);
-        list.add(root.data);
+        list.add(root.val);
     }
 
     static ArrayList<Integer> Iterative1(TreeNode root) {
@@ -37,7 +37,7 @@ public class PostOrder {
             if (temp.left != null) st1.push(temp.left);
             if (temp.right != null) st1.push(temp.right);
         }
-        while (!st2.empty()) result.add(st2.pop().data);
+        while (!st2.empty()) result.add(st2.pop().val);
         return result;
     }
 
@@ -47,7 +47,7 @@ public class PostOrder {
         st.add(root);
         while (!st.isEmpty()) {
             TreeNode temp = st.pop();
-            result.add(temp.data);
+            result.add(temp.val);
             if (temp.left != null) st.push(temp.left);
             if (temp.right != null) st.push(temp.right);
         }

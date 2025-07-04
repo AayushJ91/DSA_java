@@ -1,21 +1,19 @@
-import com.sun.source.tree.Tree;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 class TreeNode {
-    int data;
+    int val;
     TreeNode left;
     TreeNode right;
     //constructors
     TreeNode() {}
     TreeNode(int val, TreeNode left, TreeNode right) {
-        this.data = val;
+        this.val = val;
         this.left = left;
         this.right = right;
     }
     TreeNode(int c){
-        this.data = c;
+        this.val = c;
         left = right = null;
     }
 }
@@ -24,7 +22,7 @@ public class BinaryTree {
     static void Inorder(TreeNode root) {
         if (root == null) {return;}
         Inorder(root.left);
-        System.out.print(root.data+",");
+        System.out.print(root.val+",");
         Inorder(root.right);
     }
 
@@ -34,7 +32,7 @@ public class BinaryTree {
         q.add(root);
         while (!q.isEmpty()) {
             TreeNode temp = q.poll();
-            System.out.print(temp.data+",");
+            System.out.print(temp.val+",");
             if (temp.left != null) q.add(temp.left);
             if (temp.right != null) q.add(temp.right);
         }
@@ -77,8 +75,8 @@ public class BinaryTree {
         //if the root is empty or reached the leaf node
         if (root == null) return false;
 
-        //if it matches the data of a TreeNode
-        if (root.data == val) return true;
+        //if it matches the val of a TreeNode
+        if (root.val == val) return true;
 
         //recursively finding the val
         boolean left_search = Search(root.left, val);

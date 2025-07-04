@@ -18,7 +18,7 @@ public class InorderTraversal {
             return list;
         }
         list.addAll(inorderTraversal(root.left));
-        list.add(root.data);
+        list.add(root.val);
         list.addAll(inorderTraversal(root.right));
         return list;
     }
@@ -27,7 +27,7 @@ public class InorderTraversal {
         if (root == null) return;
 
         recursive(root.left);
-        System.out.print(root.data+",");
+        System.out.print(root.val+",");
         recursive(root.right);
     }
 
