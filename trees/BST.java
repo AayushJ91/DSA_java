@@ -110,14 +110,14 @@ public class BST {
         root.right.right.right = new TreeNode(20);
         root.right.right.right.left = new TreeNode(18);
         //              12
-        //             /  \
-        //            5    15
-        //           / \   / \
-        //          3   7 13  17
-        //         /     \  \   \
-        //        1       9  14  20
-        //               / \     /
-        //              8   11  18
+        //           /      \
+        //          5        15
+        //         / \       / \
+        //        3   7     13  17
+        //       /     \     \   \
+        //      1       9    14  20
+        //             / \       /
+        //            8   11    18
 
         DeleteNode.deleteNode(root, 13);
         System.out.println(root.right.left.val);

@@ -18,7 +18,7 @@ class TreeNode {
     }
 }
 
-public class BinaryTree {
+class Binarytree {
     static void Inorder(TreeNode root) {
         if (root == null) {return;}
         Inorder(root.left);
