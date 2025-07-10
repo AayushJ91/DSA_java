@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/stacks_queues" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/trees" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/heap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BacktTracking" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
