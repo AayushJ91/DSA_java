@@ -10,6 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/trees" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/heap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BacktTracking" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Contests" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bit_manipulation" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/graphs" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
