@@ -1,4 +1,4 @@
-//Problem: Kth smallest number in the array
+//Problem: Kth the smallest number in the array
 //link: https://www.geeksforgeeks.org/problems/kth-smallest-element5635/1
 //Source: LoveBabbar
 //Topics: HashMap

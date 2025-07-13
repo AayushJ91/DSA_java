@@ -2,7 +2,7 @@
 //link: https://leetcode.com/problems/kth-largest-element-in-an-array/
 //Source: LeetCode (215)
 //Topics: Heaps
-//Diff: Med
+//Diff: Med - naive is better
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -7,48 +7,43 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.PriorityQueue;
 
 public class minStack {
     //Nhi hua
     //runtime error
     private int top;
-    private ArrayList<Integer> list;
-    private int min1;
-    private int min2;
+    private final ArrayList<Integer> list;
+    PriorityQueue<Integer> heap;
     public minStack() {
         top = -1;
         list = new ArrayList<>();
-        int min1 = Integer.MAX_VALUE;
-        int min2 = Integer.MAX_VALUE;
+        heap = new PriorityQueue<>();
     }
 
     public void push(int val) {
         top++;
         list.add(val);
-        if (val <= min1) {
-            min2 = min1;
-            min1 = val;
-        }
-        System.out.println("min1 pos:"+(min1));
-        System.out.println("min2 pos:"+(min2));
-        System.out.println();
+        heap.add(val);
     }
 
     public void pop() {
-        if (list.getLast() == min1) {
-            min1 = min2;
+        if (Objects.equals(list.getLast(), heap.peek())){
+            heap.poll();
         }
         list.removeLast();
         top--;
     }
 
     public int top() {
-//        return arr[top];
-        return 5;
+        return list.get(top);
     }
 
     public int getMin() {
-        return min1;
+        if (heap.isEmpty()){
+            return 0;
+        }
+        return heap.peek();
     }
 
     public static void main(String[] args) {

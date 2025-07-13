@@ -1,4 +1,4 @@
-//Problem: we have to return the adjancency list of the graph whose edges list is give
+//Problem: we have to return the adjancency list of the graph whose edges list is given
 //link: https://www.geeksforgeeks.org/problems/print-adjacency-list-1587115620/1?page=1&category=Graph&sortBy=difficulty
 //Source: gfg
 //Topics: Graphs

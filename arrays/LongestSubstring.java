@@ -2,9 +2,7 @@
 //link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 //Source: LeetCode (3)
 //Topics: Sliding Window
-//Diff: Med
-//Time:
-//space:
+//Diff: Med - done by optimistic
 
 import java.util.*;
 

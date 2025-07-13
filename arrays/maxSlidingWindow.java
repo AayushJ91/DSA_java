@@ -2,9 +2,8 @@
 //link: https://leetcode.com/problems/sliding-window-maximum/
 //Source: LeetCode (239)
 //Topics: sliding window
-//Diff: hard
+//Diff: hard - not done (optimized uses deque and I dont know about it)
 
-import javax.naming.InsufficientResourcesException;
 import java.util.ArrayList;
 import java.util.Arrays;
 

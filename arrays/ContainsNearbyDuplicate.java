@@ -2,7 +2,7 @@
 //link: https://leetcode.com/problems/contains-duplicate-ii/?envType=problem-list-v2&envId=sliding-window
 //Source: LeetCode (76)
 //Topics:
-//Diff: Hard
+//Diff: Hard-nhi hua
 
 import java.util.ArrayList;
 

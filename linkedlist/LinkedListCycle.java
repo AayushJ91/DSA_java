@@ -8,7 +8,7 @@
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class LinkedListCycle {
+public class    LinkedListCycle {
     public static boolean naive(ListNode head) {
         //this approach I did with hollow method
         //if the list will contain any node with duplicate value which is not linked then also it will return true
