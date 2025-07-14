@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Contests" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bit_manipulation" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/graphs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dynamic_programming" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
