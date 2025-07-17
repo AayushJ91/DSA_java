@@ -2,7 +2,7 @@
 //link: https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 //Source: LeetCode(448)
 //Topics: Arrays
-//Diff: Easy
+//Diff: Easy - done by naive
 
 import java.util.*;
 
@@ -24,7 +24,7 @@ public class DisappearedNumbers {
     }
 
     private static List<Integer> optimised(int[] nums) {
-
+        return new ArrayList<>();
     }
 
     public static void main(String[] args) {
