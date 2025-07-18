@@ -1,6 +1,10 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
+//Problem: given a total n courses and a prerequisites matrix(ai,bi) which means for doing ai first we have to do bi;
+//link: https://leetcode.com/problems/course-schedule/
+//Source: LeetCode(207)
+//Topics: graph
+//Diff: Med
+
+import java.util.*;
 
 
 //NHI HUA
@@ -8,38 +12,41 @@ import java.util.HashSet;
 public class CourseSchedule {
     public static boolean canFinish(int numCourses, int[][] prerequisites) {
         if (prerequisites.length == 0) return false;
-        boolean result = true;
-        HashSet<Integer> visited = new HashSet<>();
-        ArrayList<Integer> completed = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> preReq = new ArrayList<>();
+        List<List<Integer>> courses = new ArrayList<>();
         for (int i = 0; i < numCourses; i++) {
-            preReq.add(new ArrayList<>());
+            courses.add(new ArrayList<>());
         }
-        for (int i = 0; i < prerequisites.length; i++) {
-            int[] curr = prerequisites[i];
-            preReq.get(curr[0]).add(curr[1]);
-            //if you want to do curr[0] course you should do the curr[1] courses
+        for (int[] course : prerequisites) {
+            courses.get(course[1]).add(course[0]);
         }
-        System.out.println(preReq);
+        int[] state = new int[numCourses]; // 0: not visited; 1: visiting; 2: visited
         for (int i = 0; i < numCourses; i++) {
-            result &= dfs(preReq, visited, i, completed);
-        }
-        return result;
-    }
-    static boolean dfs(ArrayList<ArrayList<Integer>> preReq, HashSet<Integer> visited, int course, ArrayList<Integer> completed) {
-        if (preReq.get(course).isEmpty()) {
-            return true;
-        }
-        visited.add(course);
-        for (int i = 0; i < preReq.get(course).size(); i++) {
-            if (visited.contains(course)){
-                return false;
+            if (state[i] == 0) {
+                if (!DFS(state, courses, i)) {
+                    return false;
+                }
             }
-            dfs(preReq, visited, i, completed);
-            preReq.get(course).removeLast();
         }
         return true;
     }
+    static boolean DFS(int[] state, List<List<Integer>> courses, int course) {
+        if (state[course] == 1) {
+            return false;
+        }
+        if (state[course] == 2) {
+            return true;
+        }
+
+        state[course] = 1;
+        for (int prerequisite : courses.get(course)) {
+            if (!DFS(state, courses, prerequisite)) {
+                return false;
+            }
+        }
+        state[course] = 2; // Mark as visited (finished)
+        return true;
+    }
+
     public static void main(String[] args) {
         int[][] preReq = {{0,10},{3,18},{5,5},{6,11},{11,14},{13,1},{15,1},{17,4}};
         int[][] pre = {{1,0},{0,1}};
