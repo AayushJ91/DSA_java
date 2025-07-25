@@ -2,10 +2,9 @@
 //link: https://leetcode.com/problems/sliding-window-maximum/
 //Source: LeetCode (239)
 //Topics: sliding window
-//Diff: hard - not done (optimized uses deque and I dont know about it)
+//Diff: hard - not done (optimized uses deque and I don't know about it)
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class maxSlidingWindow {
     static int[] naive(int[] nums, int k) {
@@ -25,13 +24,17 @@ public class maxSlidingWindow {
         return res;
     }
     static int[] optimistic(int[] nums, int k) {
-        ArrayList<Integer> window = new ArrayList<>();
-        int n = nums.length;
-        int[] res = new int[n-k+1];
-        int st = 0, last = st + k;
-        while (st < last) {
-            window.add(nums[st]);
-            st++;
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < nums.length - k; i++) {
+            PriorityQueue<Integer> MaxHeap = new PriorityQueue<>(Collections.reverseOrder());
+            for (int j = i; j < k; j++) {
+                MaxHeap.add(nums[i]);
+            }
+            list.add(MaxHeap.poll());
+        }
+        int[] res = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            res[i] = list.get(i);
         }
         return res;
     }

@@ -1,4 +1,4 @@
-//Problem: finding the nearesr duplicate element within range k
+//Problem: finding the nearest duplicate element within range k
 //link: https://leetcode.com/problems/contains-duplicate-ii/?envType=problem-list-v2&envId=sliding-window
 //Source: LeetCode (76)
 //Topics:

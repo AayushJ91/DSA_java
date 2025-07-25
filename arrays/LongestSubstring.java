@@ -1,4 +1,4 @@
-//Problem: lenght of longest substring without duplicate
+//Problem: length of longest substring without duplicate
 //link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 //Source: LeetCode (3)
 //Topics: Sliding Window

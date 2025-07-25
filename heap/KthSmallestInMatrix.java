@@ -1,4 +1,4 @@
-//Problem: Creturn the kth smallest value from the matrix where rows and columns are each arranged in ascending orde
+//Problem: return the kth smallest value from the matrix where rows and columns are each arranged in ascending orde
 //link: https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/
 //Source: LeetCode(378)
 //Topics: heap

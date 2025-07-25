@@ -1,4 +1,4 @@
-//Problem: given an array of length and numbers in range 0-n where one number is missing find that number
+//Problem: given an array of length n and numbers in range 0 to n-1 where one number is missing find that number
 //link: https://leetcode.com/problems/missing-number/
 //Source: LeetCode(268)
 //Topics: Bit Manipulation
