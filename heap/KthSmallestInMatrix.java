@@ -22,6 +22,7 @@ public class KthSmallestInMatrix {
         return heap.poll();
     }
 
+
     public static void main(String[] args) {
         int[][] matrix = {{-5}};
         System.out.println(kthSmallest(matrix, 1));
